@@ -1,0 +1,70 @@
+@import './../../variables.scss';
+
+.EditPost {
+    width:80%;
+    margin: 20px auto;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+    text-align: center;
+    position:relative;
+    h1{
+        font-size:22px;
+    };
+    .Header{
+        position: absolute;
+        width:100%;
+        color:#fff;
+        top:0;
+        height:70px;
+        background-color: lighten($primaryColor,30%);
+    }
+    .Content{
+        margin-top:90px;
+        label{
+            display: block;
+            margin: 15px 30px;
+            text-align: left;
+            font-weight: bold;
+            color:darken($primaryColor,10%)
+        }
+        input,
+        textarea,
+        select{
+            display: block;
+            width: 80%;
+            box-sizing: border-box;
+            border: 1px solid black;
+            outline: none;
+            border-radius: 5px;
+            font: inherit;
+            margin: 25px auto;
+            border:1px solid darken($primaryColor,30%);
+            &:focus{
+                outline: none !important;
+                border-color: $primaryColor;
+                box-shadow: 0 0 10px $primaryColor;
+            }
+        }
+        textarea{
+            resize: none
+        }
+    }
+       
+@media (min-width: $xSmallBorder) {
+    margin: 0;
+    width: 50%;
+    margin:120px auto; 
+}
+@media (max-width: $xSmallBorder) {
+    margin: 0;
+    width: 80%;
+    margin:120px auto; 
+}
+
+}
+button{
+    color:$accentColor;
+    &:hover{
+        color:#fff
+    }
+}

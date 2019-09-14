@@ -1,0 +1,55 @@
+@import '../../variables.scss';
+
+
+
+.Info {
+    width: 70%;
+    margin: 150px auto;
+    height:300px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+    text-align: center;
+    position: relative;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition:all 1s ease-in-out;
+  
+    .Title{ 
+      background-color:lighten($primaryColor,40%);
+      height:150px;
+      width:100%;
+      position: absolute;
+      top:0;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+      clip-path: polygon(50% 0%, 100% 0, 100% 30%, 50% 40%, 0 30%, 0 0);
+      h1{
+        margin:10px;
+        color:#fff;
+        font-size:30px;
+      }
+    
+    }
+    &:hover{
+       .Title{clip-path: polygon(0 0, 100% 0%, 100% 40%, 0 40%);
+        background-color:lighten($secondaryColor,40%);} 
+        transform: scale(1.1, 1.1);
+      
+    } 
+    .Content{
+      margin-top:170px;
+    }
+    @media (min-width: $xSmallBorder) {
+      margin: 0;
+      width: 50%;
+      margin:120px auto; 
+  }
+  @media (max-width: $xSmallBorder) {
+      h1{
+          font-size:22px;
+      }
+  
+      margin: 0;
+      width: 80%;
+      margin:120px auto; 
+  }
+  
+}

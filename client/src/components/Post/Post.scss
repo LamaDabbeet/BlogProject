@@ -1,0 +1,32 @@
+@import '../../variables.scss';
+
+
+.Post {
+        width: 250px;
+        padding: 16px;
+        text-align: center;
+        border: 1px solid #eee;
+        box-shadow: 0 2px 3px #ccc;
+        margin: 10px;
+        box-sizing: border-box;
+        cursor: pointer;
+        transition:all 0.5s ease-in-out;
+        margin:120px auto; 
+        @media (min-width: $mediumBorder) {
+            width: 25%;
+        }
+       @media (max-width: $xSmallBorder) {
+            width: 80%;  
+        }
+    .Title{
+        position:relative;
+        h1{
+         font-size:15px;
+        }
+
+    }
+
+   }
+
+
+
