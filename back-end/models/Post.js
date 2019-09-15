@@ -3,16 +3,16 @@ const Schema = mongoose.Schema;
 
 // Create Schema
 const PostSchema = new Schema({
-  title:{
+  title: {
     type: String,
   },
-  text: {
+  body: {
     type: String,
   },
-  name: {
+  author: {
     type: String
   },
-  avatar: {
+  category: {
     type: String
   },
   date: {

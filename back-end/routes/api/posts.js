@@ -35,10 +35,10 @@ router.get('/:id', (req, res) => {
 router.post('/', async (req, res) => {
 
   const newPost = new Post({
-    text: req.body.text,
-    name: req.body.name,
-    avatar: req.body.avatar,
-    title: req.body.title
+    title: req.body.title,
+    author: req.body.author,
+    category: req.body.avatar,
+    body: req.body.body
   });
 
   newPost.save()
@@ -53,9 +53,9 @@ router.put('/:id', async (req, res) => {
   Post.findById(req.params.id, function (err, post) {
     if (err)
       res.send(err);
-    post.name = req.body.name ? req.body.name : post.name;
-    post.text = req.body.text ? req.body.text : post.text;
-    post.avatar = req.body.avatar ? req.body.avatar : post.avatar;
+    post.author = req.body.author ? req.body.author : post.author;
+    post.body = req.body.body ? req.body.body : post.body;
+    post.category = req.body.category ? req.body.category : post.category;
     post.title = req.body.title ? req.body.title : post.title;
     post.save(function (err) {
       if (err)
