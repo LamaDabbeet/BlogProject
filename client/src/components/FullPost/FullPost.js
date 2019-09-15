@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 import './FullPost.scss';
-import renderHTML from 'react-render-html';
+
 
 class FullPost extends Component {
 
@@ -16,17 +16,14 @@ class FullPost extends Component {
                     <div className="Title">
                         {title}
                     </div>
-        
+
                     <div className="Content">
-                      <p><b>Autor:</b> {author}</p>
-                        <p><b>Content:</b> {body}</p>
+                        <p ><b className="Head">Author:</b> {author}</p>
+                        <p ><b className="Head">Content:</b> {body}</p>
+                        <p ><b >Category:</b> {category}</p>
+                        <h5 className="Date">Created At:  {moment(datestamp).format('DD MM YYYY')}</h5>
                     </div>
 
-
-                    <p><b>Category:</b> {category}</p>
-
-                    <h5>Create At: {moment(datestamp).format('DD MM YYYY')}</h5>
-                    <div style={{ width: '60%' }}>{renderHTML(body)}</div>
                 </div>
             </React.Fragment>
         )
