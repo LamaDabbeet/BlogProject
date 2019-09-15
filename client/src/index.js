@@ -4,7 +4,7 @@ import './index.scss';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import axios from 'axios';
-import '@trendmicro/react-sidenav/dist/react-sidenav.css';
+
 
 
 axios.defaults.baseURL = 'https://jsonplaceholder.typicode.com';
