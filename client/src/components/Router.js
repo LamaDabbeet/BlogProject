@@ -5,7 +5,6 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 import { Toolbar } from './Layout/Layout';
 import Posts from './Posts/Posts';
-import FullPost from './FullPost/FullPost';
 import NewPost from './NewPost/NewPost';
 import EditPost from './EditPost/EditPost';
 import Info from './Info/Info';
@@ -87,17 +86,18 @@ class Router extends Component {
                         posts
                     })
                 }
+
             })
+
     }
 
     render() {
         return (
             <BrowserRouter>
 
-                <div className="container">
+                <div >
 
-                    <div className="row justify-content-center">
-
+                    <div >
                         <Toolbar />
 
                         <Switch>
@@ -108,23 +108,6 @@ class Router extends Component {
                                         deletePost={this.deletePost}
                                     />
                                 );
-                            }} />
-
-                            <Route exact path="/post/:postId" render={(props) => {
-                                let idPost = props.location.pathname.replace('/post/', '')
-
-                                const posts = this.state.posts;
-                                let filter;
-                                filter = posts.filter(post => (
-                                    post.id === Number(idPost)
-                                ))
-
-
-                                return (
-                                    <FullPost
-                                        post={filter[0]}
-                                    />
-                                )
                             }} />
                             <Route exact path="/new-post" render={() => {
                                 return (
