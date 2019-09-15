@@ -38,24 +38,20 @@ class Post extends Component {
         return (
             <article className="Post">
                 <div className="Title">
-                <b><span>
-                        {title.length > 25 ? `${title.substr(0, 25)}...` : title}
-                    </span></b>
+                    {title}
                 </div>
-                            
-                <div className="Info">
-                    <span >
-                        {body.length > 300 ? `${body.substr(0, 300)}...` : body}
-                    </span>
+
+                <div className="Content">
+                    <p ><b className="Head">Content:</b> {body}</p>
+                    <p ><b >Category:</b> {category}</p>
+                    <h5 className="Date">Created At:  {moment(datestamp).format('DD MM YYYY')}</h5>
                 </div>
-                
-                <p ><b>{category}</b></p>
-            
-                <p ><b>{moment(datestamp).fromNow()}</b></p>
-                <Button><Link to={`/post/${id}`}> Show </Link></Button>
-                <Button><Link to={`/edit/${id}`}> Edit </Link></Button>
-                <Button><Link onClick={this.confirmDeletion} > Delete </Link></Button>
-               </article>
+                <div class="Buttons">
+                    <Button><Link to={`/edit/${id}`}> Edit </Link></Button>
+                    <Button><Link onClick={this.confirmDeletion} > Delete </Link></Button>
+                </div>
+
+            </article>
         );
     }
 }
