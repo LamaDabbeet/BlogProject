@@ -4,11 +4,13 @@ import classes from './NavigationItem.scss';
 
 const navigationItem = (props) => (
     <li className="NavigationItem">
+
         <Link
             to={props.link}
             className={props.active ? classes.active : null}>
             {props.children}
         </Link>
+
     </li>
 );
 
