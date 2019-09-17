@@ -5,9 +5,9 @@ import NavigationItem from './NavigationItem/NavigationItem';
 
 const navigationItems = () => (
     <ul className="NavigationItems">
-        <NavigationItem link="/" active>Posts</NavigationItem>
-        <NavigationItem link="/new-post">New Post</NavigationItem>
-        <NavigationItem link="/info">Info</NavigationItem>
+        <NavigationItem link="/" exact>Posts</NavigationItem>
+        <NavigationItem link="/new-post" exact>New Post</NavigationItem>
+        <NavigationItem link="/info" exact>Info</NavigationItem>
     </ul>
 );
 

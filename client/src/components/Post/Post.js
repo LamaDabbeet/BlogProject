@@ -36,7 +36,7 @@ class Post extends Component {
         const { id, title, body, category, datestamp } = this.props.info;
 
         return (
-            <article className="Post">
+            <div className="Post">
                 <div className="Title">
                     {title}
                 </div>
@@ -51,7 +51,7 @@ class Post extends Component {
                     <Button><Link onClick={this.confirmDeletion} > Delete </Link></Button>
                 </div>
 
-            </article>
+            </div>
         );
     }
 }

@@ -17,7 +17,8 @@
         flex-flow: row;
     }
     @media (max-width: 500px) {
-        margin-left:130px
+      display:inline-block;
+      padding:15px;
     }
 }
 
